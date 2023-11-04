@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+}
+h1{
+    color: aliceblue;
+    text-align: center;
+}
+fieldset{
+    position: relative;
+    margin-top: 100px;
+    width: auto ;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 15px;
+    height: auto;
+}
