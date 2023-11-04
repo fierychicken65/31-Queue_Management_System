@@ -26,12 +26,13 @@ SECRET_KEY = 'django-insecure-&*@i0&f8&qjg)!^p^o+)#8c_%43_95)t7oe=6r&$b(@&je_cg@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['07b2-14-143-35-158.ngrok-free.app','127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'home',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -73,14 +74,28 @@ WSGI_APPLICATION = 'hello.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'djongo',
+        'ENFORCE_SCHEMA': False,  # Set to True if you want to enforce a schema, otherwise, False.
+        'NAME': 'Scared2Compile',
+        'CLIENT': {
+            'host': 'mongodb+srv://aadiudu:<password>@scared2compile.wxkvott.mongodb.net/?retryWrites=true&w=majority',
+            'port': 27017,
+            'username': 'aadiudu',
+            'password': 'scared2compile',
+            'authSource': 'admin',
+        }
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
