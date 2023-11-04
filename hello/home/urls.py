@@ -4,5 +4,5 @@ from home import views
 
 urlpatterns = [
     path("", views.index, name = 'home'),
-    path("/qrcode",views.qrcode, name = 'qrcode'),
+    path("qrcode",views.qrcode, name = 'qrcode'),
 ]
