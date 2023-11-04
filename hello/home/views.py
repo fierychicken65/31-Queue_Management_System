@@ -6,3 +6,4 @@ def index(request):
 
 def qrcode(request):
     return render(request,"qr.html")
+ 
